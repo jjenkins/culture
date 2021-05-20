@@ -1,0 +1,57 @@
+# Engineering culture.
+
+Jim Jenkins
+jimjenkins@gmail.com
+
+## Huh?
+
+How you operate as an engineer and as a team is tightly coupled to the discipline around core processes. Building new features, identifying and fixing bugs,
+onboarding new team members, all need to become rituals that foster an engineering culture and increase execution speed.
+
+## What does that even mean?
+
+It might seem simple and obvious... engineers should be setup for success. New hires can commit code on day one. Bugs can be reproduced confidently. Deploys can have a cadence. Shipping features consistenly... just feels good.
+
+**Neat, how?**
+
+* Consistent reproducible environments
+* Testable code
+* Automation
+* Feature flags
+
+## Environments
+
+Give engineers a chance to be successful on day one. Scaling your team requires consistent, reproducible development environments.
+
+* No more "it works on my machine"
+* Stop duplicating efforts
+* Production image can be the same as development
+
+## Levelage virtualization
+
+Codify the development environment with virtualization. 
+
+.code -numbers Dockerfile
+
+## Script workflows
+
+Automate all of your development environment workflows by encapsulating commands in a Makefile or shell script.
+
+.code -numbers Makefile
+
+## Write testable code
+
+There's writing code and then there is writing testable code. Testable code is loosely coupled, seperates concerns, fosters automation, and should not be an after thought.
+Automated verification allows engineers to confidently make changes to a system. 
+
+## Feature Flags
+
+Create a culture of continuous deployment by wrapping features with flags. Flags allow features to be deployed and run "darkly" for days or weeks.
+
+Launching features becomes flipping a switch in the code. Flags allow you to integrate code as soon as it's committed, this leads to faster deploys and the ability to identify bugs faster.
+
+.code -numbers flags.go
+
+## Rituals
+
+Creating a high-performing engineering culture requires rituals that setup individuals and teams for success. Codify values or principles into concrete forms so they can be practiced regulary.
